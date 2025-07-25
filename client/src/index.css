@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/* Define a custom theme color */
+@theme {
+  --color-ui-shade-2: #4d473f; /* actual color value */
+}
+
+/* Apply global body styles */
+@layer base {
+  body {
+    @apply min-h-screen bg-ui-shade-2 text-white;
+  }
+}
