@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Settings from '../pages/Settings'
 import Analysis from '../pages/Analysis'
 import BuymeAcoffee from '../pages/BuymeAcoffee'
+import Auth from '../pages/Auth'
 const router= createBrowserRouter([
      {
         path: '/',
@@ -40,7 +41,16 @@ const router= createBrowserRouter([
             <BuymeAcoffee/>
             </>
         )
-    }
+    },
+    {
+        path:'/Auth',
+        element:(
+            <>
+            <Auth/>
+            </>
+        )
+    },
+    
 
 ])
    

@@ -57,7 +57,7 @@ Inspired by Aizen's **Kyōka Suigetsu**, this app is a **real-time chess insight
 ### **Week 1: Base Foundation**
 - [x] Setup project repo, Vite + React + Tailwind
 - [x] Routing, layout, dark/light themes  
-- [x] Integrate chessboard + basic PGN parser
+- [] Integrate chessboard + basic PGN parser
 
 ### **Week 2: Live Game Mode**
 - [ ] Integrate Chess.com / Lichess live games

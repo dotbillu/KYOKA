@@ -1,13 +1,56 @@
 @import "tailwindcss";
+/* manual dark via .dark */
+@custom-variant dark (&:where(.dark, .dark *));
 
-/* Define a custom theme color */
+/* theme tokens */
 @theme {
-  --color-ui-shade-2: #4d473f; /* actual color value */
+  --color-bg-light: #b2aea0;
+  --color-text-light: #77581c;
+  --color-bg-dark: #1b1406;
+  --color-text-dark: #fff;
 }
 
-/* Apply global body styles */
+/* style layers */
 @layer base {
+  :root {
+    --color-background: var(--color-bg-light);
+    --color-foreground: var(--color-text-light);
+  }
+
+  .dark {
+    --color-background: var(--color-bg-dark);
+    --color-foreground: var(--color-text-dark);
+  }
+
   body {
-    @apply min-h-screen bg-ui-shade-2 text-white;
+    background: var(--color-background);
+    color: var(--color-foreground);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* grid overlay in both modes */
+  body {
+    background-image:
+      linear-gradient(to right, rgba(79, 79, 79, 0.25) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(79, 79, 79, 0.25) 1px, transparent 1px);
+    background-size: 60px 60px, 60px 60px;
+    background-position: 0 0, 0 0;
+  }
+
+  /* add vintage radial effect only in dark */
+  .dark body {
+    background-image:
+      linear-gradient(to right, rgba(79, 79, 79, 0.25) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(79, 79, 79, 0.25) 1px, transparent 1px),
+      radial-gradient(circle 400px at 50% 300px, rgba(251, 251, 251, 0.08), #000);
+    background-size: 60px 60px, 60px 60px, 100% 100%;
+    background-position: 0 0, 0 0, 50% -10%;
+  }
+
+  body > * {
+    position: relative;
+    z-index: 10;
   }
 }
