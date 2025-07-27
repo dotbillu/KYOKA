@@ -1,12 +1,7 @@
+export default () => {
+    return (
+    <div>home content here </div>
+       
 
-export default ()=>{
-    return(
-        <>
-        <div className="" >
-            global chess app
-           
-        </div>
-
-        </>
-    )
+)
 }
