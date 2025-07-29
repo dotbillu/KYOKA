@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mdwebb/react-chess": "^1.2.0",
     "chess.js": "^1.4.0",
     "react": "^19.1.0",
     "react-chessboard": "^5.2.0",
