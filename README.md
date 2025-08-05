@@ -2,9 +2,9 @@
 
 ## **Month 1: Core Foundation**
 **Week 1**
-- [ ] Setup Vite + React + Tailwind + Routing
-- [ ] Integrate `react-chessboard`
-- [ ] Basic chess logic with `chess.js`
+- [x] Setup Vite + React + Tailwind + Routing
+- [x] Integrate `react-chessboard`
+- [x] Basic chess logic with `chess.js`
 
 **Week 2**
 - [ ] Add Stockfish WASM for evaluation bar
