@@ -1,59 +1,61 @@
-import {createBrowserRouter} from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 import Home from '../pages/Home';
 import Navbar from '../components/Navbar'
 import Settings from '../pages/Settings'
 import Analysis from '../pages/Analysis'
 import BuymeAcoffee from '../pages/BuymeAcoffee'
 import Auth from '../pages/Auth'
-const router= createBrowserRouter([
-     {
+
+const router = createBrowserRouter([
+    {
         path: '/',
-        element:(
+        element: (
             <>
-                <Navbar/>
-                <Home/>
+                <Navbar />
+                <Home />
             </>
         )
     },
     {
         path: '/settings',
-        element:(
+        element: (
             <>
-                <Navbar/>
-                <Settings/>
+                <Navbar />
+                <Settings />
             </>
         )
     },
     {
-        path:'/Analysis',
-        element:(
+        path: "/Analysis",
+        element: (
+            <div className="h-screen flex flex-col">
+                <Navbar />
+                <Analysis />
+            </div>
+        ),
+    },
+
+    {
+        path: '/BuymeAcoffee',
+        element: (
             <>
-            <Navbar/>
-            <Analysis/>
+                <Navbar />
+                <BuymeAcoffee />
             </>
         )
     },
     {
-        path:'/BuymeAcoffee',
-        element:(
+        path: '/Auth',
+        element: (
             <>
-            <Navbar/>
-            <BuymeAcoffee/>
+                <Auth />
             </>
         )
     },
-    {
-        path:'/Auth',
-        element:(
-            <>
-            <Auth/>
-            </>
-        )
-    },
-    
+
 
 ])
-   
+
 
 
 
